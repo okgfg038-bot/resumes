@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Thakur - Progressive Professional Resumes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f172a;
+      --card-dark: #1e293b;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --accent-glow: rgba(59, 130, 246, 0.25);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --badge-bg: #1e3a8a;
+      --badge-text: #93c5fd;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation bar */
+    .app-header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #fff;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    .brand-text h1 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .action-group {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--card-dark);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: #27354a;
+      border-color: #475569;
+    }
+
+    /* Subheader Tabs */
+    .tabs-wrapper {
+      background: #111c33;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.65rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow-x: auto;
+      gap: 1rem;
+    }
+
+    .tabs-container {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .tab-btn {
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .tab-btn.active {
+      color: #ffffff;
+      background: var(--accent);
+      font-weight: 600;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    .level-badge {
+      font-size: 0.72rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Container */
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .meta-bar {
+      width: 100%;
+      max-width: 900px;
+      background: var(--card-dark);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .meta-title h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .meta-title p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .meta-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 20px;
+      background: #1e3a8a;
+      color: #93c5fd;
+      border: 1px solid #2563eb;
+      font-weight: 500;
+    }
+
+    /* Resume Document Layout (ATS Clean Standard Paper) */
+    .resume-sheet {
+      width: 100%;
+      max-width: 900px;
+      background: #ffffff;
+      color: #111827;
+      border-radius: 4px;
+      padding: 2.8rem 3rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 5px 15px rgba(0, 0, 0, 0.2);
+      line-height: 1.45;
+      font-size: 0.92rem;
+      transition: all 0.3s ease;
+    }
+
+    /* Resume Typography and Elements */
+    .res-header {
+      text-align: center;
+      border-bottom: 2px solid #1e293b;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .res-name {
+      font-size: 1.9rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      text-transform: uppercase;
+    }
+
+    .res-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 0.2rem;
+    }
+
+    .res-contact {
+      font-size: 0.82rem;
+      color: #475569;
+      margin-top: 0.4rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .res-contact a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .res-contact a:hover {
+      text-decoration: underline;
+    }
+
+    .res-section {
+      margin-top: 1.15rem;
+    }
+
+    .res-sec-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.55rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .res-summary-text {
+      font-size: 0.87rem;
+      color: #334155;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .res-skills-list {
+      font-size: 0.85rem;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .res-skills-list strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .res-item {
+      margin-bottom: 0.85rem;
+    }
+
+    .res-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .res-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .res-item-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .res-item-subtitle {
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .res-item-meta {
+      font-size: 0.8rem;
+      color: #64748b;
+      font-style: italic;
+    }
+
+    .res-tech-stack {
+      font-size: 0.8rem;
+      color: #475569;
+      margin-bottom: 0.25rem;
+      font-style: italic;
+    }
+
+    .res-bullets {
+      margin-left: 1.25rem;
+      font-size: 0.85rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .res-bullets li {
+      margin-bottom: 0.3rem;
+    }
+
+    .res-bullets li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #10b981;
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      display: none;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* PRINT STYLES - ATS Pixel-Perfect Engine */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+
+      .app-header,
+      .tabs-wrapper,
+      .meta-bar,
+      .toast,
+      .no-print {
+        display: none !important;
+      }
+
+      .main-content {
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .resume-sheet {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      @page {
+        margin: 10mm 12mm 10mm 12mm;
+        size: A4 portrait;
+      }
+
+      a {
+        color: #000000 !important;
+        text-decoration: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-icon">OT</div>
+      <div class="brand-text">
+        <h1>Om Thakur • Resume Portfolio</h1>
+        <p>Progressive Engineering Profiles (Fresher → SDE-2)</p>
+      </div>
+    </div>
+    <div class="action-group">
+      <button class="btn btn-secondary" onclick="copyActiveMarkdown()">
+        📋 Copy Markdown
+      </button>
+      <a id="btnDownloadPdf" class="btn btn-secondary" href="1_Fresher_with_6Mo_Internship.pdf" target="_blank">
+        📥 Open / Download PDF
+      </a>
+      <button class="btn btn-primary" onclick="window.print()">
+        🖨️ Print / Save as PDF
+      </button>
+    </div>
+  </header>
+
+  <!-- Level Switcher Tabs -->
+  <nav class="tabs-wrapper">
+    <div class="tabs-container">
+      <button class="tab-btn active" onclick="switchResume(1)">
+        <span class="level-badge">L1</span> Fresher + 6mo Intern
+      </button>
+      <button class="tab-btn" onclick="switchResume(2)">
+        <span class="level-badge">L2</span> 6mo FTE + 6mo Intern
+      </button>
+      <button class="tab-btn" onclick="switchResume(3)">
+        <span class="level-badge">L3</span> 1yr FTE + 6mo Intern
+      </button>
+      <button class="tab-btn" onclick="switchResume(4)">
+        <span class="level-badge">L4</span> 2yr FTE + 6mo Intern
+      </button>
+      <button class="tab-btn" onclick="switchResume(5)">
+        <span class="level-badge">L5</span> 3yr FTE + 6mo Intern
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- Meta Bar Info -->
+    <div class="meta-bar">
+      <div class="meta-title">
+        <h2 id="metaLevelTitle">Level 1: Fresher with 6 Months Internship</h2>
+        <p id="metaLevelDesc">Target: Junior Java Backend Developer, Software Engineer Trainee, SDE-1 (Campus)</p>
+      </div>
+      <div class="meta-tags" id="metaTags">
+        <span class="tag">Java 17</span>
+        <span class="tag">Spring Boot 3</span>
+        <span class="tag">Spring Security</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Flyway</span>
+        <span class="tag">150+ LeetCode</span>
+      </div>
+    </div>
+
+    <!-- Printable Sheet -->
+    <article class="resume-sheet" id="resumeSheet">
+      <!-- Injected Dynamically by JavaScript -->
+    </article>
+
+  </main>
+
+  <div class="toast" id="toast">Markdown copied to clipboard!</div>
+
+  <script>
+    const resumeData = {
+      1: {
+        title: "Level 1: Fresher with 6 Months Internship",
+        subtitle: "Target: Junior Java Backend Developer, Software Engineer Trainee, SDE-1 (Campus)",
+        tags: ["Java 17", "Spring Boot 3", "Spring Security", "MySQL", "Flyway", "150+ LeetCode"],
+        roleTitle: "Java Backend Developer",
+        summary: "Results-driven Java Backend Developer and Information Technology undergraduate with hands-on internship experience engineering secure, scalable REST APIs using Java 17, Spring Boot 3, Spring Data JPA, and MySQL. Solid foundation in Object-Oriented Programming (OOP), layered architecture (Controller-Service-Repository), and relational database modeling. Strong problem-solving aptitude with 150+ Data Structures & Algorithms problems solved on LeetCode. Passionate about clean code, test-driven development, and rapid technical adaptability.",
+        skills: [
+          { cat: "Languages", val: "Java (17/21), SQL, JavaScript, C" },
+          { cat: "Frameworks & Backend", val: "Spring Boot 3, Spring MVC, Spring Data JPA, Hibernate, RESTful APIs, DTO Pattern, Jakarta Bean Validation" },
+          { cat: "Security & Auth", val: "Spring Security 6, JWT (JSON Web Tokens), BCrypt Hashing, Role-Based Access Control (RBAC)" },
+          { cat: "Databases", val: "MySQL, PostgreSQL, Relational Schema Design, Foreign Keys, Indexing, Transactions" },
+          { cat: "CS Fundamentals", val: "Data Structures & Algorithms, Object-Oriented Design (OOP), SOLID Principles, Collections Framework, Multithreading" },
+          { cat: "Tools & DevOps", val: "Git, GitHub, Maven, Postman, Flyway, Swagger/OpenAPI, Docker (basics), IntelliJ IDEA" }
+        ],
+        experience: [
+          {
+            role: "Java Developer Intern",
+            company: "Dollop Infotech, Indore",
+            date: "January 2026 – June 2026 (6 Months)",
+            bullets: [
+              "Designed and deployed <strong>12+ RESTful API endpoints</strong> using <strong>Spring Boot 3</strong> and <strong>Spring Data JPA</strong>, adhering strictly to layered architecture (Controller, Service, Repository, DTO).",
+              "Implemented stateless <strong>JWT-based authentication and Role-Based Access Control (RBAC)</strong> using Spring Security, securing application endpoints and preventing unauthorized access.",
+              "Engineered strict request/response DTO contracts with <strong>Jakarta Bean Validation</strong> (<code>@Valid</code>, <code>@NotNull</code>, <code>@Size</code>), eliminating malformed payloads and returning standardized error responses.",
+              "Modeled relational schemas in <strong>MySQL</strong> with normalized tables, foreign key constraints, and optimized <code>@ManyToOne</code> / <code>@OneToMany</code> relationships with JPA/Hibernate.",
+              "Centralized API exception handling with <code>@RestControllerAdvice</code> and custom business exceptions, improving API error clarity for frontend and client consumers.",
+              "Collaborated with team members using <strong>Git feature-branch workflows</strong>, participating in code reviews, resolving merge conflicts, and verifying API contracts via Postman collections."
+            ]
+          }
+        ],
+        projects: [
+          {
+            name: "Instagram Clone – Full-Stack Social Media Platform",
+            tech: "Java 17, Spring Boot 3, Spring Security, JWT, Spring Data JPA, MySQL, Flyway, React, Tailwind CSS",
+            link: "https://github.com/Omsingh1912/Instagram-clone",
+            bullets: [
+              "Architected a full-featured social platform backend managing user profiles, follow relationships, post feeds, comments, and like metrics.",
+              "Managed automated database schema migrations and zero-downtime versioning using <strong>Flyway</strong>, ensuring consistent DDL execution across environments.",
+              "Configured custom security components including <code>CustomAccessDeniedHandler</code> and <code>AuthenticationEntryPoint</code> for fine-grained security auditing.",
+              "Developed responsive frontend interfaces in <strong>React</strong> using Axios for API consumption and React Router for client-side navigation.",
+              "Wrote integration tests using <code>@SpringBootTest</code> and mock MVC tests, ensuring critical auth and post flows maintain 100% contract compliance."
+            ]
+          },
+          {
+            name: "Hospital Management System",
+            tech: "Java, Spring Boot, Spring Security, JWT, Spring Data JPA, MySQL, React",
+            bullets: [
+              "Developed clinical REST APIs for Doctor, Patient, Appointment, and Medical Record modules, mapping relationships with JPA/Hibernate.",
+              "Enforced role-based access control separating administrative, medical staff, and patient portals with JWT token verification.",
+              "Structured DTO-based request boundaries with bean validation, preventing invalid appointment scheduling and record mutations."
+            ]
+          },
+          {
+            name: "Sales Tracking & Management System",
+            tech: "Java, Spring Boot, Spring Security, JWT, Spring Data JPA, Hibernate, MySQL, REST APIs",
+            bullets: [
+              "Built an enterprise sales pipeline backend supporting multi-tenant user roles (Admin, Sales Manager, Agent).",
+              "Engineered REST APIs for Lead Lifecycle, Deal Progression, and Activity Tracking with server-side pagination, sorting, and dynamic filtering using JPA Specifications.",
+              "Implemented password hashing using BCrypt and stateless JWT token expiration cycles, protecting sensitive corporate sales data.",
+              "Designed database indexing on high-frequency query fields (Lead Status, Agent ID), accelerating search query speeds by 30%."
+            ]
+          }
+        ],
+        dsa: "Solved 150+ LeetCode problems spanning Trees, Graphs, Dynamic Programming, Heaps, Hashing, Binary Search, Linked Lists, Stacks, and Queues using Java.",
+        edu: {
+          degree: "Bachelor of Technology (B.Tech) – Information Technology",
+          college: "Sushila Devi Bansal College of Technology (SDBC), Indore",
+          grad: "Graduating: June 2026",
+          cgpa: "6.9 / 10"
+        }
+      },
+
+      2: {
+        title: "Level 2: 6 Months Full-Time Experience + 6 Months Internship (~1 Year Total)",
+        subtitle: "Target: Associate Software Engineer, Junior Backend Developer (0.5 – 1.0 Year)",
+        tags: ["Redis Caching", "Spring Boot 3", "N+1 Query Optimization", "Flyway Migrations", "JUnit 5 & Mockito", "Swagger 3.0"],
+        roleTitle: "Associate Software Engineer | Java Backend Developer",
+        summary: "Software Engineer with ~1 year of total engineering experience (6 months full-time + 6 months internship) specializing in Java, Spring Boot, Spring Security, and MySQL. Proven track record of taking REST APIs from architectural design to production deployment, optimizing query performance, and implementing Redis in-memory caching to reduce latency. Strong advocate of clean code, test-driven development with JUnit 5/Mockito, and automated database migrations with Flyway. Solid foundation in Computer Science fundamentals and Data Structures & Algorithms (150+ LeetCode problems).",
+        skills: [
+          { cat: "Languages", val: "Java (17/21), SQL, JavaScript" },
+          { cat: "Backend Frameworks", val: "Spring Boot 3, Spring Data JPA, Hibernate, Spring MVC, RESTful Web Services, DTO Pattern" },
+          { cat: "Security & Auth", val: "Spring Security 6, JWT Authentication & Refresh Tokens, BCrypt, Role-Based Access Control (RBAC)" },
+          { cat: "Databases & Caching", val: "MySQL, PostgreSQL, Redis (Cache-Aside Pattern, TTL), Schema Indexing, Connection Pooling (HikariCP)" },
+          { cat: "Testing & Quality", val: "JUnit 5, Mockito, Postman Automated Tests, SonarLint" },
+          { cat: "Tools & Infrastructure", val: "Git, GitHub, Docker, Flyway, Maven, Swagger/OpenAPI 3.0, Linux CLI" }
+        ],
+        experience: [
+          {
+            role: "Associate Software Engineer",
+            company: "Dollop Infotech (or Tech Startup), Indore",
+            date: "July 2026 – Present (6 Months Full-Time)",
+            bullets: [
+              "Engineered and maintained <strong>15+ high-availability RESTful API endpoints</strong> for client-facing modules using <strong>Spring Boot 3</strong> and <strong>Spring Data JPA</strong>, serving 25,000+ daily requests.",
+              "Integrated <strong>Redis in-memory caching</strong> for frequently accessed master data and user profile endpoints, slashing database query volume by <strong>40%</strong> and dropping P95 API response times from <strong>320ms to 95ms</strong>.",
+              "Diagnosed and eliminated critical <strong>Hibernate N+1 query bottlenecks</strong> across relational entities using JPQL <code>JOIN FETCH</code> queries and <code>@EntityGraph</code>, reducing database roundtrips by 65%.",
+              "Implemented refresh token rotation alongside stateless <strong>JWT authentication</strong> in Spring Security 6, bolstering session security and mitigating token theft vulnerabilities.",
+              "Wrote comprehensive unit and integration tests using <strong>JUnit 5 and Mockito</strong>, achieving <strong>78% code coverage</strong> across core business services and preventing regressions.",
+              "Managed database schema evolutions across staging and production using <strong>Flyway SQL migrations</strong>, guaranteeing zero downtime during deployment.",
+              "Standardized external and internal API contracts using <strong>OpenAPI 3.0 / Swagger UI</strong>, accelerating frontend feature integration cycles by 30%."
+            ]
+          },
+          {
+            role: "Java Developer Intern",
+            company: "Dollop Infotech, Indore",
+            date: "January 2026 – June 2026 (6 Months Internship)",
+            bullets: [
+              "Built foundational backend CRUD services and business logic for enterprise management portals using Spring Boot and MySQL.",
+              "Implemented request validation utilizing Jakarta Bean Validation (<code>@NotNull</code>, <code>@Valid</code>) and centralized error responses with <code>@RestControllerAdvice</code>.",
+              "Designed normalized MySQL schemas with foreign keys and indexed high-cardinality search fields."
+            ]
+          }
+        ],
+        projects: [
+          {
+            name: "Instagram Clone – Scalable Social Platform Backend",
+            tech: "Java 17, Spring Boot 3, Spring Security, Redis, Spring Data JPA, Flyway, MySQL, React",
+            link: "https://github.com/Omsingh1912/Instagram-clone",
+            bullets: [
+              "Integrated <strong>Redis caching</strong> to cache user feeds and follower counts with custom TTL expiration, protecting database capacity during peak request bursts.",
+              "Secured APIs with custom <code>SecurityFilterChain</code>, custom <code>AccessDeniedHandler</code>, and role-based permissions separating regular users and administrative moderators.",
+              "Automated database versioning and baseline schemas using <strong>Flyway</strong>, eliminating manual SQL migration errors."
+            ]
+          },
+          {
+            name: "Enterprise Sales Tracking & Analytics System",
+            tech: "Java, Spring Boot, Spring Security, JWT, JPA/Hibernate, MySQL, Docker",
+            bullets: [
+              "Designed an enterprise sales pipeline managing Lead status transitions, Deal quotas, and sales performance metrics.",
+              "Developed dynamic filtering and multi-column sorting using Spring Data JPA Specifications and <code>Pageable</code> execution.",
+              "Containerized backend services and MySQL database using <strong>Docker and Docker Compose</strong> for seamless team onboarding."
+            ]
+          }
+        ],
+        dsa: "150+ LeetCode problems solved with Java. Deep understanding of Arrays, Binary Trees, Graphs, Hash Maps, Heaps, and Dynamic Programming.",
+        edu: {
+          degree: "Bachelor of Technology (B.Tech) – Information Technology",
+          college: "Sushila Devi Bansal College of Technology (SDBC), Indore",
+          grad: "Graduation: 2026",
+          cgpa: "6.9 / 10"
+        }
+      },
+
+      3: {
+        title: "Level 3: 1 Year Full-Time Experience + 6 Months Internship (~1.5 Years Total)",
+        subtitle: "Target: Software Development Engineer I (SDE-1), Backend Software Engineer",
+        tags: ["Kafka / RabbitMQ", "WebSockets STOMP", "Docker CI/CD", "HikariCP Tuning", "Microservices", "Spring Boot 3"],
+        roleTitle: "Software Engineer | Java / Spring Boot Backend Developer",
+        summary: "Results-oriented Software Engineer with 1.5 years of professional backend engineering experience (1 year full-time + 6 months internship) architecting high-throughput microservices and RESTful APIs using Java 17, Spring Boot 3, Spring Security, MySQL, and Docker. Demonstrated success in implementing asynchronous event messaging (RabbitMQ/Kafka), real-time WebSockets, Redis distributed caching, and automated CI/CD deployment pipelines. Experienced in SQL query execution plan analysis, N+1 query eradication, and database connection pool tuning.",
+        skills: [
+          { cat: "Languages", val: "Java (17/21), SQL, JavaScript, HTML/CSS" },
+          { cat: "Backend & Architecture", val: "Spring Boot 3, Spring MVC, Spring Data JPA, Hibernate, Microservices, Event-Driven Architecture, RESTful APIs, DTOs" },
+          { cat: "Security & Auth", val: "Spring Security 6, OAuth2/OIDC, JWT Authentication & Refresh Tokens, BCrypt, RBAC" },
+          { cat: "Asynchronous & Real-Time", val: "RabbitMQ / Apache Kafka, Spring WebSocket (STOMP, SockJS), Async Event Listeners (@Async)" },
+          { cat: "Databases & Caching", val: "MySQL, PostgreSQL, Redis (Cache-Aside, Invalidation, TTL), HikariCP Tuning, Composite Indexing" },
+          { cat: "DevOps & Cloud", val: "Docker, Docker Compose, GitHub Actions (CI/CD), Flyway, Linux/Bash, AWS S3 (basics)" },
+          { cat: "Observability & Testing", val: "JUnit 5, Mockito, Testcontainers, Spring Boot Actuator, Swagger/OpenAPI 3.0, Postman" }
+        ],
+        experience: [
+          {
+            role: "Software Engineer (Backend)",
+            company: "Tech Corp (or SaaS Startup), Indore",
+            date: "October 2025 – Present (1 Year Full-Time)",
+            bullets: [
+              "Architected and maintained scalable backend microservices and REST APIs using <strong>Java 17 and Spring Boot 3</strong>, supporting <strong>80,000+ daily active requests</strong> with 99.9% service availability.",
+              "Decoupled synchronous business operations by introducing <strong>RabbitMQ / Kafka</strong> for asynchronous background event processing (notifications, audit logging, and data exports), reducing API response times by <strong>45%</strong>.",
+              "Integrated <strong>Spring WebSocket (STOMP protocol over SockJS)</strong> for real-time bidirectional user notifications and instant messaging feeds, handling 500+ concurrent persistent connections.",
+              "Reduced high-traffic read latency by <strong>55%</strong> (P95 from 280ms to 70ms) using a distributed <strong>Redis caching layer</strong> with cache-aside and event-based cache invalidation strategies.",
+              "Optimized relational database performance in <strong>MySQL</strong> by analyzing <code>EXPLAIN</code> query execution plans, adding composite B-Tree indexes, and tuning <strong>HikariCP connection pool parameters</strong>, eliminating database connection starvation during traffic spikes.",
+              "Built automated <strong>CI/CD pipelines via GitHub Actions</strong> that executed automated unit/integration tests (<code>mvn test</code>), verified SonarQube quality gates, and generated Docker images pushed to container registries."
+            ]
+          },
+          {
+            role: "Java Developer Intern",
+            company: "Dollop Infotech, Indore",
+            date: "April 2025 – September 2025 (6 Months Internship)",
+            bullets: [
+              "Built and integrated 15+ secure RESTful endpoints for enterprise web applications using Spring Boot and Spring Data JPA.",
+              "Configured Spring Security with stateless JWT authentication, password hashing with BCrypt, and role-based endpoint protection.",
+              "Authored automated unit test suites using JUnit 5 and Mockito, ensuring test coverage over critical authentication and validation services."
+            ]
+          }
+        ],
+        projects: [
+          {
+            name: "Event-Driven Social Media Platform (Instagram Architecture)",
+            tech: "Java 17, Spring Boot 3, Spring Security, Redis, WebSockets, Flyway, MySQL, React, Docker",
+            link: "https://github.com/Omsingh1912/Instagram-clone",
+            bullets: [
+              "Engineered an enterprise-scale full-stack social media system supporting post creation, multimedia storage, feeds, comments, and interactions.",
+              "Deployed WebSocket bidirectional messaging for live notifications on user likes, mentions, and follows.",
+              "Enforced schema version control and automated migrations using <strong>Flyway</strong>, ensuring seamless rollouts across Docker environments."
+            ]
+          },
+          {
+            name: "Enterprise Sales Pipeline & CRM Engine",
+            tech: "Java, Spring Boot, Spring Data JPA, Redis, MySQL, Docker, Postman",
+            bullets: [
+              "Built a multi-tenant sales CRM supporting lead ingestion, deal progression stages, and dynamic sales analytics.",
+              "Handled large-volume batch queries using Spring Data <code>Pageable</code> specifications and asynchronous background processing, cutting report generation wait times by 60%."
+            ]
+          }
+        ],
+        dsa: "150+ LeetCode problems solved. Strong intuition for time/space complexity trade-offs, modular design, and robust concurrency handling.",
+        edu: {
+          degree: "Bachelor of Technology (B.Tech) – Information Technology",
+          college: "Sushila Devi Bansal College of Technology (SDBC), Indore",
+          grad: "Graduation: 2025",
+          cgpa: "6.9 / 10"
+        }
+      },
+
+      4: {
+        title: "Level 4: 2 Years Full-Time Experience + 6 Months Internship (~2.5 Years Total)",
+        subtitle: "Target: Software Development Engineer (SDE), Mid-Level Backend Engineer",
+        tags: ["Kafka DLQ", "Redis Cluster & Redisson", "Resilience4j", "Kubernetes", "Prometheus & Grafana", "Distributed Locks"],
+        roleTitle: "Software Development Engineer (Backend) | SDE",
+        summary: "Performance-driven Software Development Engineer with 2.5 years of experience (2 years full-time + 6 months internship) designing, scaling, and maintaining distributed microservices and event-driven architectures using Java 17/21, Spring Boot 3, Apache Kafka, Redis Cluster, and PostgreSQL/MySQL. Proven expertise in building fault-tolerant architectures utilizing Resilience4j, designing high-throughput messaging pipelines, and containerizing workloads across Docker and Kubernetes/AWS. Deep knowledge of database query optimization, distributed caching strategies, concurrency control, and production observability with Prometheus & Grafana.",
+        skills: [
+          { cat: "Languages", val: "Java (17/21), SQL, JavaScript, Bash" },
+          { cat: "Frameworks & Microservices", val: "Spring Boot 3, Spring Cloud (Gateway, Eureka/Consul), Spring Data JPA, Hibernate, RESTful APIs, gRPC (basics)" },
+          { cat: "Distributed Systems & Messaging", val: "Apache Kafka (Partitions, Consumer Groups, DLQ), RabbitMQ, Distributed Locks (Redisson), WebSockets (STOMP)" },
+          { cat: "Databases & Caching", val: "PostgreSQL, MySQL, Redis Cluster (Cache-Aside, Write-Through, Invalidation, Pub/Sub), HikariCP, Flyway" },
+          { cat: "Resilience & Concurrency", val: "Resilience4j (Circuit Breaker, Rate Limiter, Retry, Bulkhead), Idempotency Keys, Optimistic Locking (@Version)" },
+          { cat: "DevOps, Cloud & Containers", val: "Docker, Kubernetes (Deployments, Services, ConfigMaps), AWS (EC2, S3, RDS, CloudWatch), GitHub Actions, CI/CD" },
+          { cat: "Observability & Testing", val: "Prometheus, Grafana, OpenTelemetry, Micrometer, JUnit 5, Mockito, Testcontainers, SonarQube" }
+        ],
+        experience: [
+          {
+            role: "Software Development Engineer (Backend)",
+            company: "CloudTech Solutions (or Product Scale-up)",
+            date: "October 2024 – Present (2 Years Full-Time)",
+            bullets: [
+              "Architected and maintained 4 core distributed microservices handling <strong>250,000+ daily transactions</strong> across mission-critical commerce and feed pipelines with <strong>99.95% uptime</strong>.",
+              "Implemented an event-driven architecture using <strong>Apache Kafka</strong>, establishing dedicated topics, partitioned consumer groups, and <strong>Dead Letter Queues (DLQ)</strong> for asynchronous order processing and audit events, reducing end-to-end processing latency by <strong>40%</strong>.",
+              "Designed a multi-layer distributed caching strategy using <strong>Redis Cluster</strong>, implementing Cache-Aside with probabilistic early expiration, which reduced database read loads by <strong>65%</strong> and brought P99 response times down from <strong>450ms to 65ms</strong>.",
+              "Implemented resilience patterns across inter-service REST communications using <strong>Resilience4j (Circuit Breakers, Timeouts, and Rate Limiters)</strong>, preventing cascading failures and ensuring graceful degradation during third-party downstream outages.",
+              "Prevented concurrent race conditions on critical transactions by implementing <strong>distributed locking with Redis/Redisson</strong> and database-level <strong>optimistic locking (<code>@Version</code>)</strong>, achieving zero double-spending or duplicate writes.",
+              "Refactored legacy PostgreSQL queries by introducing composite B-Tree indexes, analyzing query plans via <code>EXPLAIN ANALYZE</code>, and restructuring schema partitions, yielding a <strong>4x improvement in complex analytical query throughput</strong>.",
+              "Established end-to-end observability across all microservices using <strong>Spring Boot Actuator, Micrometer, Prometheus, and Grafana dashboards</strong>, shrinking Mean Time to Detect (MTTD) production issues by <strong>50%</strong>.",
+              "Streamlined release lifecycles by building multi-stage <strong>Docker builds and CI/CD pipelines in GitHub Actions</strong>, deploying containerized services directly to Kubernetes clusters."
+            ]
+          },
+          {
+            role: "Java Developer Intern",
+            company: "Dollop Infotech, Indore",
+            date: "April 2024 – September 2024 (6 Months Internship)",
+            bullets: [
+              "Built and optimized 15+ secure RESTful endpoints for enterprise applications using Spring Boot 3, Spring Security, and Spring Data JPA.",
+              "Configured stateless JWT authentication and role-based access control (RBAC), securing sensitive administrative endpoints.",
+              "Maintained 80%+ unit test code coverage using JUnit 5 and Mockito, actively participating in Agile sprints and peer code reviews."
+            ]
+          }
+        ],
+        projects: [
+          {
+            name: "High-Scale Social Media & Feed Engine (Instagram Distributed Architecture)",
+            tech: "Java 21, Spring Boot 3, Kafka, Redis, WebSockets, PostgreSQL, Docker, Kubernetes",
+            link: "https://github.com/Omsingh1912/Instagram-clone",
+            bullets: [
+              "Architected a distributed social platform backend capable of supporting real-time media ingestion, feed generation, and high-frequency search indexing.",
+              "Implemented real-time push notifications and bidirectional chat feeds using <strong>Spring WebSocket (STOMP)</strong> backed by a Redis Pub/Sub message broker for multi-instance horizontal scaling.",
+              "Decoupled notification generation and analytics telemetry into background Kafka consumers, shielding customer-facing API threads from processing spikes."
+            ]
+          },
+          {
+            name: "Enterprise Sales Pipeline & Financial Reporting Service",
+            tech: "Java 17, Spring Boot, Spring Security, Redis, MySQL, Flyway, Docker Compose",
+            bullets: [
+              "Developed an enterprise sales lifecycle engine tracking lead attribution, deal forecasting, and sales quotas.",
+              "Implemented asynchronous multi-parameter search utilizing JPA Criteria API and Redis caching, cutting reporting wait times by 70%."
+            ]
+          }
+        ],
+        dsa: "200+ LeetCode problems solved. Strong system design knowledge: High-Level Design (HLD) & Low-Level Design (LLD), CAP Theorem, Load Balancing, Consistent Hashing, Sharding.",
+        edu: {
+          degree: "Bachelor of Technology (B.Tech) – Information Technology",
+          college: "Sushila Devi Bansal College of Technology (SDBC), Indore",
+          grad: "Graduation: 2024",
+          cgpa: "6.9 / 10"
+        }
+      },
+
+      5: {
+        title: "Level 5: 3 Years Full-Time Experience + 6 Months Internship (~3.5 Years Total)",
+        subtitle: "Target: Software Development Engineer II (SDE-2), Senior Backend Engineer",
+        tags: ["1.5M+ Daily Requests", "Transactional Outbox", "Saga Pattern", "Zero-Downtime DB", "AWS EKS / RDS", "ADRs & Mentoring"],
+        roleTitle: "Software Development Engineer II (SDE-2) | Senior Backend Engineer",
+        summary: "High-impact Software Development Engineer with 3.5 years of experience (3 years full-time + 6 months internship) specializing in designing, scaling, and operating distributed, high-throughput backend systems using Java 17/21, Spring Boot 3, Apache Kafka, Redis Cluster, AWS, and PostgreSQL/MySQL. Proven success in owning microservices serving 1.5M+ daily requests with 99.95% uptime, executing zero-downtime database migrations, and eliminating distributed data inconsistencies via the Transactional Outbox Pattern. Adept at leading architectural design reviews (ADRs), establishing observability (Prometheus/Grafana/OpenTelemetry), enforcing engineering quality standards, and mentoring junior engineers.",
+        skills: [
+          { cat: "Languages", val: "Java (17/21), SQL, Go (basics), Bash, JavaScript" },
+          { cat: "Backend & Architecture", val: "Spring Boot 3, Spring Cloud, Microservices, Domain-Driven Design (DDD), Distributed Systems, RESTful APIs, gRPC, Event-Driven Architecture" },
+          { cat: "Distributed Messaging & Streaming", val: "Apache Kafka (Event Streaming, Consumer Groups, Schema Registry, DLQ), RabbitMQ, Transactional Outbox Pattern, Saga Pattern" },
+          { cat: "Databases & Storage", val: "PostgreSQL, MySQL, Redis Cluster (Distributed Caching, Redisson Locks, Streams), Read Replicas, Database Partitioning, Flyway" },
+          { cat: "Resilience & Security", val: "Resilience4j (Circuit Breaker, Rate Limiting), Distributed Locks, Optimistic/Pessimistic Locking, Idempotency, OAuth2.0/OIDC, JWT Rotation" },
+          { cat: "Cloud & DevOps", val: "AWS (EKS, ECS, RDS Aurora, S3, SQS, CloudWatch), Docker, Kubernetes, Terraform (IaC basics), GitHub Actions, CI/CD Pipelines" },
+          { cat: "Observability & Quality", val: "Prometheus, Grafana, OpenTelemetry, Micrometer Tracing, ELK Stack, JUnit 5, Mockito, Testcontainers, SonarQube" }
+        ],
+        experience: [
+          {
+            role: "Software Development Engineer II (Backend)",
+            company: "Enterprise Tech Solutions (or High-Growth Scale-up)",
+            date: "October 2023 – Present (3 Years Full-Time)",
+            bullets: [
+              "Architected, scaled, and operated 5 mission-critical microservices processing <strong>1.5M+ daily transactions</strong> with sub-50ms P95 latency and <strong>99.95% service uptime</strong>.",
+              "Eliminated distributed dual-write inconsistencies between relational databases and Kafka event buses by implementing the <strong>Transactional Outbox Pattern</strong> with CDC, ensuring guaranteed at-least-once message delivery.",
+              "Spearheaded a distributed caching overhaul using <strong>Redis Cluster</strong>, engineering cache-aside strategies, cache-stampede mitigation (distributed mutex locking with Redisson), and automated invalidation, which <strong>decreased primary database CPU load by 70%</strong> and reduced P99 latency from <strong>520ms to 48ms</strong>.",
+              "Implemented distributed transaction management across distributed order and payment microservices utilizing the <strong>Choreographed Saga Pattern</strong> with automated compensating rollback workflows.",
+              "Re-engineered high-volume database queries and table architectures in <strong>PostgreSQL</strong> (implementing range partitioning, composite indexing, and read-replica query routing), driving a <strong>35% reduction in cloud RDS infrastructure costs</strong>.",
+              "Orchestrated <strong>zero-downtime database migrations</strong> on production tables exceeding 50M records using Flyway and the expand-and-contract migration pattern.",
+              "Hardened system resilience under traffic surges by embedding <strong>Resilience4j circuit breakers, bulkhead thread isolation, and distributed rate limiters</strong>, preserving core services during third-party payment gateway outages.",
+              "Implemented end-to-end distributed tracing and metrics with <strong>Micrometer, OpenTelemetry, Prometheus, and Grafana</strong>, slashing Mean Time to Resolution (MTTR) by <strong>55%</strong>.",
+              "Authored <strong>12+ Architectural Decision Records (ADRs)</strong>, spearheaded technical design reviews, enforced 85%+ code coverage via SonarQube quality gates, and directly <strong>mentored 4 junior backend engineers and interns</strong>."
+            ]
+          },
+          {
+            role: "Software Engineer Intern",
+            company: "Dollop Infotech, Indore",
+            date: "April 2023 – September 2023 (6 Months Internship)",
+            bullets: [
+              "Designed and built 15+ secure RESTful APIs for enterprise web platforms using Java, Spring Boot, and Spring Data JPA.",
+              "Configured Spring Security with stateless JWT authentication, password encryption (BCrypt), and role-based access control.",
+              "Optimized relational database access in MySQL, resolving Hibernate N+1 query bottlenecks and writing automated unit test suites with JUnit 5 and Mockito."
+            ]
+          }
+        ],
+        projects: [
+          {
+            name: "High-Throughput Distributed Social & Feed Engine (Instagram Scale Architecture)",
+            tech: "Java 21, Spring Boot 3, Apache Kafka, Redis Cluster, WebSockets, PostgreSQL, Docker, AWS EKS",
+            link: "https://github.com/Omsingh1912/Instagram-clone",
+            bullets: [
+              "Architected a distributed social media platform capable of handling real-time post creation, feed fan-out, multimedia indexing, and instant messaging.",
+              "Implemented a hybrid feed generation mechanism (fan-out-on-write for standard users, fan-out-on-read for high-follower accounts) backed by Redis sorted sets (<code>ZSET</code>), slashing feed generation latency by 80%.",
+              "Built real-time notifications and live interaction streams using <strong>Spring WebSocket (STOMP)</strong> cluster backed by Redis Pub/Sub for cross-pod synchronization.",
+              "Containerized services with Docker and deployed via Helm charts on Kubernetes with automated horizontal pod autoscaling (HPA) driven by CPU and custom request metrics."
+            ]
+          },
+          {
+            name: "Enterprise Multi-Tenant Sales Pipeline & Analytics Platform",
+            tech: "Java 17, Spring Boot, Spring Security, Redis, MySQL, Flyway, Docker Compose",
+            bullets: [
+              "Designed a multi-tenant sales CRM supporting dynamic lead scoring, deal velocity analytics, and sales agent performance dashboards.",
+              "Implemented asynchronous batch processing for multi-million record CSV ingestion, utilizing multi-threaded batch readers and direct JDBC batch inserts.",
+              "Enforced automated schema migrations across all tenant databases using <strong>Flyway</strong>, ensuring strict schema consistency."
+            ]
+          }
+        ],
+        dsa: "250+ LeetCode problems solved. Advanced system design expertise: Microservices Decomposition, CAP Theorem, Database Sharding, Eventual Consistency, Idempotency, Rate Limiting Algorithms.",
+        edu: {
+          degree: "Bachelor of Technology (B.Tech) – Information Technology",
+          college: "Sushila Devi Bansal College of Technology (SDBC), Indore",
+          grad: "Graduation: 2023",
+          cgpa: "6.9 / 10"
+        }
+      }
+    };
+
+    let currentLevel = 1;
+
+    function renderResume(lvl) {
+      const data = resumeData[lvl];
+      const sheet = document.getElementById('resumeSheet');
+
+      document.getElementById('metaLevelTitle').innerText = data.title;
+      document.getElementById('metaLevelDesc').innerText = data.subtitle;
+
+      const tagsHtml = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
+      document.getElementById('metaTags').innerHTML = tagsHtml;
+
+      let expHtml = data.experience.map(exp => `
+        <div class="res-item">
+          <div class="res-item-header">
+            <div>
+              <span class="res-item-title">${exp.role}</span> &bull; 
+              <span class="res-item-subtitle">${exp.company}</span>
+            </div>
+            <div class="res-item-meta">${exp.date}</div>
+          </div>
+          <ul class="res-bullets">
+            ${exp.bullets.map(b => `<li>${b}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+
+      let projHtml = data.projects.map(p => `
+        <div class="res-item">
+          <div class="res-item-header">
+            <div>
+              <span class="res-item-title">${p.name}</span>
+              ${p.link ? ` &bull; <a href="${p.link}" target="_blank" style="color:#2563eb;font-size:0.8rem;text-decoration:none;">GitHub</a>` : ''}
+            </div>
+          </div>
+          <div class="res-tech-stack">Tech: ${p.tech}</div>
+          <ul class="res-bullets">
+            ${p.bullets.map(b => `<li>${b}</li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+
+      let skillsHtml = data.skills.map(s => `
+        <div><strong>${s.cat}:</strong> ${s.val}</div>
+      `).join('');
+
+      sheet.innerHTML = `
+        <header class="res-header">
+          <h1 class="res-name">OM THAKUR</h1>
+          <div class="res-title">${data.roleTitle}</div>
+          <div class="res-contact">
+            <span>Indore, Madhya Pradesh, India</span>
+            <span>&bull;</span>
+            <span>+91-9302975212</span>
+            <span>&bull;</span>
+            <span><a href="mailto:omsinghthakur930@gmail.com">omsinghthakur930@gmail.com</a></span>
+            <span>&bull;</span>
+            <a href="https://linkedin.com/in/om-thakur" target="_blank">LinkedIn</a>
+            <span>&bull;</span>
+            <a href="https://github.com/Omsingh1912" target="_blank">GitHub</a>
+            <span>&bull;</span>
+            <a href="https://leetcode.com/u/Omsingh1912" target="_blank">LeetCode</a>
+          </div>
+        </header>
+
+        <section class="res-section">
+          <h2 class="res-sec-title">Professional Summary</h2>
+          <p class="res-summary-text">${data.summary}</p>
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-sec-title">Technical Skills</h2>
+          <div class="res-skills-list">${skillsHtml}</div>
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-sec-title">Professional Experience</h2>
+          ${expHtml}
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-sec-title">Key Projects</h2>
+          ${projHtml}
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-sec-title">Problem Solving & Algorithms</h2>
+          <p class="res-summary-text">${data.dsa}</p>
+        </section>
+
+        <section class="res-section">
+          <h2 class="res-sec-title">Education</h2>
+          <div class="res-item-header">
+            <div>
+              <span class="res-item-title">${data.edu.degree}</span> &bull; 
+              <span class="res-item-subtitle">${data.edu.college}</span>
+            </div>
+            <div class="res-item-meta">${data.edu.grad} | CGPA: ${data.edu.cgpa}</div>
+          </div>
+        </section>
+      `;
+    }
+
+    function switchResume(lvl) {
+      currentLevel = lvl;
+      document.querySelectorAll('.tab-btn').forEach((btn, idx) => {
+        if (idx + 1 === lvl) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      const pdfMap = {
+        1: "1_Fresher_with_6Mo_Internship.pdf",
+        2: "2_6Mo_Experience_with_6Mo_Internship.pdf",
+        3: "3_1Yr_Experience_with_6Mo_Internship.pdf",
+        4: "4_2Yr_Experience_with_6Mo_Internship.pdf",
+        5: "5_3Yr_Experience_with_6Mo_Internship.pdf"
+      };
+      const dlBtn = document.getElementById('btnDownloadPdf');
+      if (dlBtn && pdfMap[lvl]) {
+        dlBtn.href = pdfMap[lvl];
+      }
+      renderResume(lvl);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3000);
+    }
+
+    async function copyActiveMarkdown() {
+      const fileNameMap = {
+        1: "1_Fresher_with_6Mo_Internship.md",
+        2: "2_6Mo_Experience_with_6Mo_Internship.md",
+        3: "3_1Yr_Experience_with_6Mo_Internship.md",
+        4: "4_2Yr_Experience_with_6Mo_Internship.md",
+        5: "5_3Yr_Experience_with_6Mo_Internship.md"
+      };
+
+      try {
+        const resp = await fetch(fileNameMap[currentLevel]);
+        if (resp.ok) {
+          const text = await resp.text();
+          await navigator.clipboard.writeText(text);
+          showToast(`Level ${currentLevel} Markdown copied to clipboard!`);
+          return;
+        }
+      } catch (e) {
+        // Fallback: extract from innerText
+      }
+      
+      const sheet = document.getElementById('resumeSheet');
+      await navigator.clipboard.writeText(sheet.innerText);
+      showToast(`Level ${currentLevel} text copied to clipboard!`);
+    }
+
+    // Initialize with Level 1
+    renderResume(1);
+  </script>
+</body>
+</html>
