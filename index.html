@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om Thakur - Progressive Professional Resumes</title>
+  <title>Om Thakur - Java Backend Developer Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -266,13 +266,15 @@
     }
 
     .res-contact {
-      font-size: 0.82rem;
+      font-size: 0.80rem;
       color: #475569;
-      margin-top: 0.4rem;
+      margin-top: 0.35rem;
       display: flex;
       justify-content: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
+      white-space: nowrap;
     }
 
     .res-contact a {
@@ -398,12 +400,24 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* PRINT STYLES - ATS Pixel-Perfect Engine */
+    /* PRINT STYLES - ATS Pixel-Perfect Level-Adaptive Engine */
     @media print {
-      body {
+      @page {
+        size: A4 portrait;
+        margin: 0 !important; /* Eliminates browser default headers (Date & Title) and footers (URL & page numbers) */
+      }
+
+      html, body {
         background: #ffffff !important;
-        color: #000000 !important;
+        color: #111827 !important;
         padding: 0 !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        overflow: hidden !important;
       }
 
       .app-header,
@@ -417,25 +431,305 @@
       .main-content {
         padding: 0 !important;
         margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        display: block !important;
+        overflow: hidden !important;
       }
 
       .resume-sheet {
         box-shadow: none !important;
+        border: none !important;
         border-radius: 0 !important;
-        padding: 0 !important;
         margin: 0 !important;
-        max-width: 100% !important;
-        width: 100% !important;
+        max-width: 210mm !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        box-sizing: border-box !important;
+        padding: 10mm 14mm 10mm 14mm !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important; /* Dynamically balances sections to cover the entire page height */
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        overflow: hidden !important;
       }
 
-      @page {
-        margin: 10mm 12mm 10mm 12mm;
-        size: A4 portrait;
+      /* Base Typography & Elements */
+      .res-header {
+        text-align: center !important;
+        border-bottom: 1.5pt solid #1e293b !important;
+        padding-bottom: 3.5pt !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .res-name {
+        font-size: 19pt !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.02em !important;
+        color: #0f172a !important;
+        line-height: 1.1 !important;
+      }
+
+      .res-title {
+        font-size: 10.5pt !important;
+        font-weight: 600 !important;
+        color: #1d4ed8 !important;
+        margin-top: 2pt !important;
+      }
+
+      .res-contact {
+        font-size: 7.9pt !important;
+        color: #334155 !important;
+        margin-top: 2.5pt !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 5pt !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+
+      .res-section {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .res-sec-title {
+        font-size: 9.8pt !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        border-bottom: 0.75pt solid #cbd5e1 !important;
+        padding-bottom: 1.5pt !important;
+        margin-bottom: 3pt !important;
+        letter-spacing: 0.04em !important;
+      }
+
+      .res-summary-text {
+        font-size: 8.7pt !important;
+        color: #1e293b !important;
+        line-height: 1.36 !important;
+        text-align: justify !important;
+      }
+
+      .res-skills-list {
+        font-size: 8.5pt !important;
+        color: #1e293b !important;
+        line-height: 1.38 !important;
+      }
+
+      .res-skills-list strong {
+        color: #0f172a !important;
+      }
+
+      .res-item {
+        margin-bottom: 3.5pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      .res-item:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      .res-item-header {
+        font-size: 9.1pt !important;
+        margin-bottom: 1.5pt !important;
+      }
+
+      .res-item-title {
+        font-weight: 700 !important;
+        color: #0f172a !important;
+      }
+
+      .res-item-subtitle {
+        font-weight: 600 !important;
+        color: #1d4ed8 !important;
+      }
+
+      .res-item-meta {
+        font-size: 8.2pt !important;
+        color: #475569 !important;
+      }
+
+      .res-tech-stack {
+        font-size: 8.2pt !important;
+        color: #475569 !important;
+        margin-bottom: 1.5pt !important;
+      }
+
+      .res-bullets {
+        margin-left: 13pt !important;
+        font-size: 8.5pt !important;
+        color: #1e293b !important;
+        line-height: 1.34 !important;
+      }
+
+      .res-bullets li {
+        margin-bottom: 1.8pt !important;
+      }
+
+      .res-bullets li:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      .res-bullets li strong {
+        color: #0f172a !important;
       }
 
       a {
-        color: #000000 !important;
+        color: #1d4ed8 !important;
         text-decoration: none !important;
+      }
+
+      /* Level 1 (Fresher) Precision Print - Full Page Balanced Coverage */
+      .resume-sheet.level-1 {
+        padding: 6mm 14mm 6mm 14mm !important;
+      }
+      .resume-sheet.level-1 .res-header {
+        padding-bottom: 3pt !important;
+      }
+      .resume-sheet.level-1 .res-name {
+        font-size: 19pt !important;
+      }
+      .resume-sheet.level-1 .res-title {
+        font-size: 10.5pt !important;
+        margin-top: 1.5pt !important;
+      }
+      .resume-sheet.level-1 .res-contact {
+        font-size: 7.9pt !important;
+        margin-top: 2pt !important;
+        gap: 5pt !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+      .resume-sheet.level-1 .res-sec-title {
+        font-size: 9.6pt !important;
+        margin-bottom: 2.5pt !important;
+        padding-bottom: 1.5pt !important;
+      }
+      .resume-sheet.level-1 .res-summary-text {
+        font-size: 8.6pt !important;
+        line-height: 1.35 !important;
+      }
+      .resume-sheet.level-1 .res-skills-list {
+        font-size: 8.5pt !important;
+        line-height: 1.36 !important;
+      }
+      .resume-sheet.level-1 .res-item-header {
+        font-size: 9.1pt !important;
+        margin-bottom: 1.2pt !important;
+      }
+      .resume-sheet.level-1 .res-tech-stack {
+        font-size: 8.2pt !important;
+        margin-bottom: 1.5pt !important;
+      }
+      .resume-sheet.level-1 .res-bullets {
+        font-size: 8.5pt !important;
+        line-height: 1.34 !important;
+      }
+      .resume-sheet.level-1 .res-bullets li {
+        margin-bottom: 1.8pt !important;
+      }
+      .resume-sheet.level-1 .res-item {
+        margin-bottom: 3pt !important;
+      }
+
+      /* Level 2 (6Mo) Precision Print - Full Single Page Coverage */
+      .resume-sheet.level-2 {
+        padding: 11mm 14mm 11mm 14mm !important;
+      }
+      .resume-sheet.level-2 .res-header {
+        padding-bottom: 4.5pt !important;
+      }
+      .resume-sheet.level-2 .res-name {
+        font-size: 19.5pt !important;
+      }
+      .resume-sheet.level-2 .res-title {
+        font-size: 10.8pt !important;
+        margin-top: 2.5pt !important;
+      }
+      .resume-sheet.level-2 .res-contact {
+        font-size: 7.9pt !important;
+        gap: 5pt !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+      .resume-sheet.level-2 .res-sec-title {
+        font-size: 10.0pt !important;
+        margin-bottom: 3.5pt !important;
+      }
+      .resume-sheet.level-2 .res-summary-text {
+        font-size: 8.9pt !important;
+        line-height: 1.42 !important;
+      }
+      .resume-sheet.level-2 .res-skills-list {
+        font-size: 8.8pt !important;
+        line-height: 1.45 !important;
+      }
+      .resume-sheet.level-2 .res-item-header {
+        font-size: 9.4pt !important;
+      }
+      .resume-sheet.level-2 .res-bullets {
+        font-size: 8.7pt !important;
+        line-height: 1.40 !important;
+      }
+      .resume-sheet.level-2 .res-bullets li {
+        margin-bottom: 2.6pt !important;
+      }
+      .resume-sheet.level-2 .res-item {
+        margin-bottom: 4.5pt !important;
+      }
+
+      /* Level 3 (1Yr) Precision Print - Full Single Page Coverage */
+      .resume-sheet.level-3 {
+        padding: 10mm 14mm 10mm 14mm !important;
+      }
+      .resume-sheet.level-3 .res-header {
+        padding-bottom: 4pt !important;
+      }
+      .resume-sheet.level-3 .res-name {
+        font-size: 19pt !important;
+      }
+      .resume-sheet.level-3 .res-title {
+        font-size: 10.5pt !important;
+      }
+      .resume-sheet.level-3 .res-contact {
+        font-size: 7.9pt !important;
+        gap: 5pt !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
+      }
+      .resume-sheet.level-3 .res-sec-title {
+        font-size: 9.8pt !important;
+        margin-bottom: 3pt !important;
+      }
+      .resume-sheet.level-3 .res-summary-text {
+        font-size: 8.7pt !important;
+        line-height: 1.36 !important;
+      }
+      .resume-sheet.level-3 .res-skills-list {
+        font-size: 8.5pt !important;
+        line-height: 1.38 !important;
+      }
+      .resume-sheet.level-3 .res-item-header {
+        font-size: 9.2pt !important;
+      }
+      .resume-sheet.level-3 .res-bullets {
+        font-size: 8.5pt !important;
+        line-height: 1.34 !important;
+      }
+      .resume-sheet.level-3 .res-bullets li {
+        margin-bottom: 2.0pt !important;
+      }
+      .resume-sheet.level-3 .res-item {
+        margin-bottom: 3.5pt !important;
       }
     }
   </style>
@@ -458,7 +752,7 @@
       <a id="btnDownloadPdf" class="btn btn-secondary" href="1_Fresher_with_6Mo_Internship.pdf" target="_blank">
         📥 Open / Download PDF
       </a>
-      <button class="btn btn-primary" onclick="window.print()">
+      <button class="btn btn-primary" onclick="printResume()">
         🖨️ Print / Save as PDF
       </button>
     </div>
@@ -558,15 +852,6 @@
             ]
           },
           {
-            name: "Hospital Management System",
-            tech: "Java, Spring Boot, Spring Security, JWT, Spring Data JPA, MySQL, React",
-            bullets: [
-              "Developed clinical REST APIs for Doctor, Patient, Appointment, and Medical Record modules, mapping relationships with JPA/Hibernate.",
-              "Enforced role-based access control separating administrative, medical staff, and patient portals with JWT token verification.",
-              "Structured DTO-based request boundaries with bean validation, preventing invalid appointment scheduling and record mutations."
-            ]
-          },
-          {
             name: "Sales Tracking & Management System",
             tech: "Java, Spring Boot, Spring Security, JWT, Spring Data JPA, Hibernate, MySQL, REST APIs",
             bullets: [
@@ -606,13 +891,11 @@
             company: "Dollop Infotech (or Tech Startup), Indore",
             date: "July 2026 – Present (6 Months Full-Time)",
             bullets: [
-              "Engineered and maintained <strong>15+ high-availability RESTful API endpoints</strong> for client-facing modules using <strong>Spring Boot 3</strong> and <strong>Spring Data JPA</strong>, serving 25,000+ daily requests.",
-              "Integrated <strong>Redis in-memory caching</strong> for frequently accessed master data and user profile endpoints, slashing database query volume by <strong>40%</strong> and dropping P95 API response times from <strong>320ms to 95ms</strong>.",
-              "Diagnosed and eliminated critical <strong>Hibernate N+1 query bottlenecks</strong> across relational entities using JPQL <code>JOIN FETCH</code> queries and <code>@EntityGraph</code>, reducing database roundtrips by 65%.",
+              "Engineered and maintained <strong>15+ high-availability RESTful API endpoints</strong> using <strong>Spring Boot 3</strong> and <strong>Spring Data JPA</strong>, serving 25,000+ daily requests.",
+              "Integrated <strong>Redis in-memory caching (Cache-Aside)</strong> for master data and user endpoints, slashing database query volume by <strong>40%</strong> and dropping P95 API response times from <strong>320ms to 95ms</strong>.",
+              "Diagnosed and eliminated critical <strong>Hibernate N+1 query bottlenecks</strong> across relational entities using JPQL <code>JOIN FETCH</code> and <code>@EntityGraph</code>, reducing database roundtrips by 65%.",
               "Implemented refresh token rotation alongside stateless <strong>JWT authentication</strong> in Spring Security 6, bolstering session security and mitigating token theft vulnerabilities.",
-              "Wrote comprehensive unit and integration tests using <strong>JUnit 5 and Mockito</strong>, achieving <strong>78% code coverage</strong> across core business services and preventing regressions.",
-              "Managed database schema evolutions across staging and production using <strong>Flyway SQL migrations</strong>, guaranteeing zero downtime during deployment.",
-              "Standardized external and internal API contracts using <strong>OpenAPI 3.0 / Swagger UI</strong>, accelerating frontend feature integration cycles by 30%."
+              "Achieved <strong>78% test code coverage</strong> with <strong>JUnit 5 and Mockito</strong>; managed automated zero-downtime database migrations across staging and production using <strong>Flyway</strong>."
             ]
           },
           {
@@ -620,9 +903,9 @@
             company: "Dollop Infotech, Indore",
             date: "January 2026 – June 2026 (6 Months Internship)",
             bullets: [
-              "Built foundational backend CRUD services and business logic for enterprise management portals using Spring Boot and MySQL.",
-              "Implemented request validation utilizing Jakarta Bean Validation (<code>@NotNull</code>, <code>@Valid</code>) and centralized error responses with <code>@RestControllerAdvice</code>.",
-              "Designed normalized MySQL schemas with foreign keys and indexed high-cardinality search fields."
+              "Built foundational backend CRUD services and validation (<code>@NotNull</code>, <code>@Valid</code>) using Spring Boot and MySQL with centralized <code>@RestControllerAdvice</code>.",
+              "Designed normalized MySQL schemas with primary/foreign key relationships and indexed high-cardinality search fields.",
+              "Engineered strict request/response DTO contracts with Jakarta Bean Validation (<code>@Valid</code>, <code>@NotNull</code>), eliminating malformed payloads."
             ]
           }
         ],
@@ -633,17 +916,17 @@
             link: "https://github.com/Omsingh1912/Instagram-clone",
             bullets: [
               "Integrated <strong>Redis caching</strong> to cache user feeds and follower counts with custom TTL expiration, protecting database capacity during peak request bursts.",
-              "Secured APIs with custom <code>SecurityFilterChain</code>, custom <code>AccessDeniedHandler</code>, and role-based permissions separating regular users and administrative moderators.",
-              "Automated database versioning and baseline schemas using <strong>Flyway</strong>, eliminating manual SQL migration errors."
+              "Secured APIs with custom <code>SecurityFilterChain</code> and role-based permissions separating regular users and administrative moderators.",
+              "Automated database schema migrations using <strong>Flyway</strong> and developed responsive client UI in React with Axios interceptors."
             ]
           },
           {
             name: "Enterprise Sales Tracking & Analytics System",
             tech: "Java, Spring Boot, Spring Security, JWT, JPA/Hibernate, MySQL, Docker",
             bullets: [
-              "Designed an enterprise sales pipeline managing Lead status transitions, Deal quotas, and sales performance metrics.",
-              "Developed dynamic filtering and multi-column sorting using Spring Data JPA Specifications and <code>Pageable</code> execution.",
-              "Containerized backend services and MySQL database using <strong>Docker and Docker Compose</strong> for seamless team onboarding."
+              "Engineered enterprise sales pipeline managing Lead transitions and dynamic filtering using JPA Specifications and <code>Pageable</code> execution.",
+              "Implemented BCrypt hashing, stateless JWT expiration cycles, and containerized stack with <strong>Docker & Docker Compose</strong>.",
+              "Designed database indexing on high-frequency query fields (Lead Status, Agent ID), accelerating search query speeds by 30%."
             ]
           }
         ],
@@ -678,11 +961,11 @@
             date: "October 2025 – Present (1 Year Full-Time)",
             bullets: [
               "Architected and maintained scalable backend microservices and REST APIs using <strong>Java 17 and Spring Boot 3</strong>, supporting <strong>80,000+ daily active requests</strong> with 99.9% service availability.",
-              "Decoupled synchronous business operations by introducing <strong>RabbitMQ / Kafka</strong> for asynchronous background event processing (notifications, audit logging, and data exports), reducing API response times by <strong>45%</strong>.",
+              "Decoupled synchronous business operations by introducing <strong>RabbitMQ / Kafka</strong> for asynchronous background event processing (notifications, audit logging, exports), cutting response times by <strong>45%</strong>.",
               "Integrated <strong>Spring WebSocket (STOMP protocol over SockJS)</strong> for real-time bidirectional user notifications and instant messaging feeds, handling 500+ concurrent persistent connections.",
               "Reduced high-traffic read latency by <strong>55%</strong> (P95 from 280ms to 70ms) using a distributed <strong>Redis caching layer</strong> with cache-aside and event-based cache invalidation strategies.",
-              "Optimized relational database performance in <strong>MySQL</strong> by analyzing <code>EXPLAIN</code> query execution plans, adding composite B-Tree indexes, and tuning <strong>HikariCP connection pool parameters</strong>, eliminating database connection starvation during traffic spikes.",
-              "Built automated <strong>CI/CD pipelines via GitHub Actions</strong> that executed automated unit/integration tests (<code>mvn test</code>), verified SonarQube quality gates, and generated Docker images pushed to container registries."
+              "Optimized MySQL performance by analyzing <code>EXPLAIN</code> query execution plans, adding composite B-Tree indexes, and tuning <strong>HikariCP connection pool parameters</strong> to prevent connection starvation.",
+              "Built automated <strong>CI/CD pipelines via GitHub Actions</strong> executing tests (<code>mvn test</code>), verifying SonarQube quality gates, and deploying Docker container images."
             ]
           },
           {
@@ -690,9 +973,8 @@
             company: "Dollop Infotech, Indore",
             date: "April 2025 – September 2025 (6 Months Internship)",
             bullets: [
-              "Built and integrated 15+ secure RESTful endpoints for enterprise web applications using Spring Boot and Spring Data JPA.",
-              "Configured Spring Security with stateless JWT authentication, password hashing with BCrypt, and role-based endpoint protection.",
-              "Authored automated unit test suites using JUnit 5 and Mockito, ensuring test coverage over critical authentication and validation services."
+              "Built and integrated 15+ secure RESTful endpoints using Spring Boot, Spring Data JPA, and stateless JWT authentication with BCrypt hashing.",
+              "Modeled clean MySQL database schemas with automated Flyway migrations and authored automated unit tests using JUnit 5 and Mockito."
             ]
           }
         ],
@@ -702,17 +984,16 @@
             tech: "Java 17, Spring Boot 3, Spring Security, Redis, WebSockets, Flyway, MySQL, React, Docker",
             link: "https://github.com/Omsingh1912/Instagram-clone",
             bullets: [
-              "Engineered an enterprise-scale full-stack social media system supporting post creation, multimedia storage, feeds, comments, and interactions.",
-              "Deployed WebSocket bidirectional messaging for live notifications on user likes, mentions, and follows.",
-              "Enforced schema version control and automated migrations using <strong>Flyway</strong>, ensuring seamless rollouts across Docker environments."
+              "Engineered enterprise-scale social media platform backend supporting real-time post creation, multimedia storage, feeds, and comments.",
+              "Deployed WebSocket bidirectional messaging for live notifications on user interactions and enforced schema version control using <strong>Flyway</strong>."
             ]
           },
           {
             name: "Enterprise Sales Pipeline & CRM Engine",
             tech: "Java, Spring Boot, Spring Data JPA, Redis, MySQL, Docker, Postman",
             bullets: [
-              "Built a multi-tenant sales CRM supporting lead ingestion, deal progression stages, and dynamic sales analytics.",
-              "Handled large-volume batch queries using Spring Data <code>Pageable</code> specifications and asynchronous background processing, cutting report generation wait times by 60%."
+              "Built multi-tenant sales CRM supporting lead ingestion and deal progression with dynamic filtering using JPA Specifications and <code>Pageable</code> execution.",
+              "Handled large-volume batch queries cutting report wait times by 60%; containerized architecture with <strong>Docker Compose</strong>."
             ]
           }
         ],
@@ -876,6 +1157,7 @@
     function renderResume(lvl) {
       const data = resumeData[lvl];
       const sheet = document.getElementById('resumeSheet');
+      sheet.className = 'resume-sheet level-' + lvl;
 
       document.getElementById('metaLevelTitle').innerText = data.title;
       document.getElementById('metaLevelDesc').innerText = data.subtitle;
@@ -1031,6 +1313,27 @@
       await navigator.clipboard.writeText(sheet.innerText);
       showToast(`Level ${currentLevel} text copied to clipboard!`);
     }
+
+    function printResume() {
+      const orig = document.title;
+      // Sets clean filename for Save as PDF
+      document.title = "Om_Thakur_Java_Backend_Developer_Resume";
+      window.print();
+      setTimeout(() => {
+        document.title = orig;
+      }, 1000);
+    }
+
+    window.addEventListener('beforeprint', () => {
+      window._savedDocTitle = document.title;
+      document.title = "Om_Thakur_Java_Backend_Developer_Resume";
+    });
+
+    window.addEventListener('afterprint', () => {
+      if (window._savedDocTitle) {
+        document.title = window._savedDocTitle;
+      }
+    });
 
     // Initialize with Level 1
     renderResume(1);

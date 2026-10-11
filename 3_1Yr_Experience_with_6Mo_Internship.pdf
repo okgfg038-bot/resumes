@@ -1,0 +1,130 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-BoldOblique >>
+endobj
+7 0 obj
+<< /Length 11550 >>
+stream
+BT /F2 18.5 Tf 0.060 0.090 0.160 rg 1 0 0 1 243.25 808.00 Tm (OM THAKUR) Tj ET
+BT /F2 10.2 Tf 0.110 0.310 0.850 rg 1 0 0 1 147.13 793.57 Tm (Software Engineer | Java / Spring Boot Backend Developer) Tj ET
+BT /F1 8.0 Tf 0.250 0.300 0.380 rg 1 0 0 1 118.84 780.82 Tm (Indore, MP, India  |  +91-9302975212  |  omsinghthakur930@gmail.com  |  LinkedIn  |  GitHub  |  LeetCode) Tj ET
+0.150 0.200 0.300 RG 1.00 w 34.00 773.82 m 561.28 773.82 l S
+BT /F2 9.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 763.82 Tm (PROFESSIONAL SUMMARY) Tj ET
+0.750 0.800 0.850 RG 0.60 w 34.00 760.82 m 561.28 760.82 l S
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 34.00 752.32 Tm (Results-oriented Software Engineer with 1.5 years of professional backend engineering experience \(1 year full-time + 6 months) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 34.00 739.72 Tm (internship\) architecting high-throughput microservices and RESTful APIs using Java 17, Spring Boot 3, Spring Security, MySQL, and) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 34.00 727.12 Tm (Docker. Demonstrated success in implementing asynchronous event messaging \(RabbitMQ/Kafka\), real-time WebSockets, Redis) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 34.00 714.52 Tm (distributed caching, and automated CI/CD deployment pipelines. Experienced in SQL query execution plan analysis, N+1 query eradication,) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 34.00 701.92 Tm (and database connection pool tuning.) Tj ET
+BT /F2 9.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 676.82 Tm (TECHNICAL SKILLS) Tj ET
+0.750 0.800 0.850 RG 0.60 w 34.00 673.82 m 561.28 673.82 l S
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 665.32 Tm (Languages: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 83.60 665.32 Tm (Java \(17/21\), SQL, JavaScript, HTML/CSS) Tj ET
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 652.72 Tm (Backend & Architecture: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 140.92 652.72 Tm (Spring Boot 3, Spring MVC, Spring Data JPA, Hibernate, Microservices, Event-Driven Architecture, RESTful) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 640.12 Tm (APIs, DTOs) Tj ET
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 627.52 Tm (Security & Auth: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 107.20 627.52 Tm (Spring Security 6, OAuth2/OIDC, JWT Authentication & Refresh Tokens, BCrypt, RBAC) Tj ET
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 614.92 Tm (Asynchronous & Real-Time: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 151.51 614.92 Tm (RabbitMQ / Apache Kafka, Spring WebSocket \(STOMP, SockJS\), Async Event Listeners \(@Async\)) Tj ET
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 602.32 Tm (Databases & Caching: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 126.47 602.32 Tm (MySQL, PostgreSQL, Redis \(Cache-Aside, Invalidation, TTL\), HikariCP Tuning, Composite Indexing) Tj ET
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 589.72 Tm (DevOps & Cloud: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 103.35 589.72 Tm (Docker, Docker Compose, GitHub Actions \(CI/CD\), Flyway, Linux/Bash, AWS S3 \(basics\)) Tj ET
+BT /F2 8.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 577.12 Tm (Observability & Testing: ) Tj ET
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 138.51 577.12 Tm (JUnit 5, Mockito, Testcontainers, Spring Boot Actuator, Swagger/OpenAPI 3.0, Postman) Tj ET
+BT /F2 9.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 552.02 Tm (PROFESSIONAL EXPERIENCE) Tj ET
+0.750 0.800 0.850 RG 0.60 w 34.00 549.02 m 561.28 549.02 l S
+BT /F2 9.2 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 540.52 Tm (Software Engineer \(Backend\)) Tj ET
+BT /F1 9.2 Tf 0.110 0.310 0.850 rg 1 0 0 1 175.16 540.52 Tm (| Tech Corp \(or SaaS Startup\), Indore) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.480 rg 1 0 0 1 399.35 540.52 Tm (October 2025 - Present \(1 Year Full-Time\)) Tj ET
+0.200 0.200 0.200 rg 37.80 531.82 m 37.80 532.48 38.34 533.02 39.00 533.02 c 39.66 533.02 40.20 532.48 40.20 531.82 c 40.20 531.16 39.66 530.62 39.00 530.62 c 38.34 530.62 37.80 531.16 37.80 531.82 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 529.32 Tm (Architected and maintained scalable backend microservices and REST APIs using Java 17 and Spring Boot 3, supporting 80,000+ daily) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 517.12 Tm (active requests with 99.9% service availability.) Tj ET
+0.200 0.200 0.200 rg 37.80 502.92 m 37.80 503.58 38.34 504.12 39.00 504.12 c 39.66 504.12 40.20 503.58 40.20 502.92 c 40.20 502.26 39.66 501.72 39.00 501.72 c 38.34 501.72 37.80 502.26 37.80 502.92 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 500.42 Tm (Decoupled synchronous business operations by introducing RabbitMQ / Kafka for asynchronous background event processing, cutting) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 488.22 Tm (response times by 45%.) Tj ET
+0.200 0.200 0.200 rg 37.80 474.02 m 37.80 474.68 38.34 475.22 39.00 475.22 c 39.66 475.22 40.20 474.68 40.20 474.02 c 40.20 473.36 39.66 472.82 39.00 472.82 c 38.34 472.82 37.80 473.36 37.80 474.02 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 471.52 Tm (Integrated Spring WebSocket \(STOMP protocol over SockJS\) for real-time bidirectional user notifications and instant messaging) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 459.32 Tm (feeds, handling 500+ concurrent connections.) Tj ET
+0.200 0.200 0.200 rg 37.80 445.12 m 37.80 445.78 38.34 446.32 39.00 446.32 c 39.66 446.32 40.20 445.78 40.20 445.12 c 40.20 444.46 39.66 443.92 39.00 443.92 c 38.34 443.92 37.80 444.46 37.80 445.12 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 442.62 Tm (Reduced high-traffic read latency by 55% \(P95 from 280ms to 70ms\) using a distributed Redis caching layer with cache-aside and) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 430.42 Tm (event-based cache invalidation.) Tj ET
+0.200 0.200 0.200 rg 37.80 416.22 m 37.80 416.88 38.34 417.42 39.00 417.42 c 39.66 417.42 40.20 416.88 40.20 416.22 c 40.20 415.56 39.66 415.02 39.00 415.02 c 38.34 415.02 37.80 415.56 37.80 416.22 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 413.72 Tm (Optimized MySQL performance by analyzing EXPLAIN execution plans, adding composite indexes, and tuning HikariCP connection pool) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 401.52 Tm (parameters.) Tj ET
+0.200 0.200 0.200 rg 37.80 387.32 m 37.80 387.98 38.34 388.52 39.00 388.52 c 39.66 388.52 40.20 387.98 40.20 387.32 c 40.20 386.66 39.66 386.12 39.00 386.12 c 38.34 386.12 37.80 386.66 37.80 387.32 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 384.82 Tm (Built automated CI/CD pipelines via GitHub Actions executing tests \(mvn test\), verifying SonarQube quality gates, and deploying Docker) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 372.62 Tm (container images.) Tj ET
+BT /F2 9.2 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 353.92 Tm (Java Developer Intern) Tj ET
+BT /F1 9.2 Tf 0.110 0.310 0.850 rg 1 0 0 1 138.07 353.92 Tm (| Dollop Infotech, Indore) Tj ET
+BT /F3 8.5 Tf 0.350 0.400 0.480 rg 1 0 0 1 367.48 353.92 Tm (April 2025 - September 2025 \(6 Months Internship\)) Tj ET
+0.200 0.200 0.200 rg 37.80 345.22 m 37.80 345.88 38.34 346.42 39.00 346.42 c 39.66 346.42 40.20 345.88 40.20 345.22 c 40.20 344.56 39.66 344.02 39.00 344.02 c 38.34 344.02 37.80 344.56 37.80 345.22 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 342.72 Tm (Built and integrated 15+ secure RESTful endpoints using Spring Boot, Spring Data JPA, and stateless JWT authentication with BCrypt) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 330.52 Tm (hashing.) Tj ET
+0.200 0.200 0.200 rg 37.80 316.32 m 37.80 316.98 38.34 317.52 39.00 317.52 c 39.66 317.52 40.20 316.98 40.20 316.32 c 40.20 315.66 39.66 315.12 39.00 315.12 c 38.34 315.12 37.80 315.66 37.80 316.32 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 313.82 Tm (Modeled clean MySQL database schemas with automated Flyway migrations and authored automated unit tests using JUnit 5 and) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 301.62 Tm (Mockito.) Tj ET
+BT /F2 9.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 270.42 Tm (KEY TECHNICAL PROJECTS) Tj ET
+0.750 0.800 0.850 RG 0.60 w 34.00 267.42 m 561.28 267.42 l S
+BT /F2 9.2 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 258.92 Tm (Event-Driven Social Media Platform \(Instagram Architecture\)) Tj ET
+BT /F3 8.0 Tf 0.110 0.310 0.850 rg 1 0 0 1 325.60 258.92 Tm (| GitHub: github.com/Omsingh1912/Instagram-clone) Tj ET
+BT /F3 8.0 Tf 0.350 0.400 0.480 rg 1 0 0 1 34.00 248.52 Tm (Tech: Java 17, Spring Boot 3, Spring Security, Redis, WebSockets, Flyway, MySQL, React, Docker) Tj ET
+0.200 0.200 0.200 rg 37.80 241.22 m 37.80 241.88 38.34 242.42 39.00 242.42 c 39.66 242.42 40.20 241.88 40.20 241.22 c 40.20 240.56 39.66 240.02 39.00 240.02 c 38.34 240.02 37.80 240.56 37.80 241.22 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 238.72 Tm (Engineered enterprise-scale social media platform backend supporting real-time post creation, multimedia storage, feeds, and) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 226.52 Tm (comments.) Tj ET
+0.200 0.200 0.200 rg 37.80 212.32 m 37.80 212.98 38.34 213.52 39.00 213.52 c 39.66 213.52 40.20 212.98 40.20 212.32 c 40.20 211.66 39.66 211.12 39.00 211.12 c 38.34 211.12 37.80 211.66 37.80 212.32 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 209.82 Tm (Deployed WebSocket bidirectional messaging for live notifications on user interactions and enforced schema version control using) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 197.62 Tm (Flyway.) Tj ET
+BT /F2 9.2 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 178.92 Tm (Enterprise Sales Pipeline & CRM Engine) Tj ET
+BT /F3 8.0 Tf 0.350 0.400 0.480 rg 1 0 0 1 34.00 168.52 Tm (Tech: Java, Spring Boot, Spring Data JPA, Redis, MySQL, Docker, Postman) Tj ET
+0.200 0.200 0.200 rg 37.80 161.22 m 37.80 161.88 38.34 162.42 39.00 162.42 c 39.66 162.42 40.20 161.88 40.20 161.22 c 40.20 160.56 39.66 160.02 39.00 160.02 c 38.34 160.02 37.80 160.56 37.80 161.22 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 158.72 Tm (Built multi-tenant sales CRM supporting lead ingestion and deal progression with dynamic filtering using JPA Specifications and) Tj ET
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 146.52 Tm (Pageable execution.) Tj ET
+0.200 0.200 0.200 rg 37.80 132.32 m 37.80 132.98 38.34 133.52 39.00 133.52 c 39.66 133.52 40.20 132.98 40.20 132.32 c 40.20 131.66 39.66 131.12 39.00 131.12 c 38.34 131.12 37.80 131.66 37.80 132.32 c f
+BT /F1 8.4 Tf 0.120 0.140 0.180 rg 1 0 0 1 46.00 129.82 Tm (Handled large-volume batch queries cutting report wait times by 60%; containerized architecture with Docker Compose.) Tj ET
+BT /F2 9.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 98.62 Tm (PROBLEM SOLVING & ALGORITHMS) Tj ET
+0.750 0.800 0.850 RG 0.60 w 34.00 95.62 m 561.28 95.62 l S
+BT /F1 8.6 Tf 0.120 0.140 0.180 rg 1 0 0 1 34.00 87.12 Tm (150+ LeetCode problems solved. Strong intuition for time/space complexity trade-offs, modular design, and robust concurrency handling.) Tj ET
+BT /F2 9.6 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 62.02 Tm (EDUCATION) Tj ET
+0.750 0.800 0.850 RG 0.60 w 34.00 59.02 m 561.28 59.02 l S
+BT /F2 8.8 Tf 0.060 0.090 0.160 rg 1 0 0 1 34.00 50.52 Tm (Bachelor of Technology \(B.Tech\) - Information Technology) Tj ET
+BT /F1 8.8 Tf 0.250 0.300 0.380 rg 1 0 0 1 293.71 50.52 Tm (| Sushila Devi Bansal College of Technology \(SDBC\), Indore) Tj ET
+BT /F3 8.200000000000001 Tf 0.350 0.400 0.480 rg 1 0 0 1 439.10 50.52 Tm (Graduation: 2026  |  CGPA: 6.9 / 10) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 7 0 R /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R >> >> >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000000344 00000 n 
+0000000426 00000 n 
+0000012029 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+12191
+%%EOF
